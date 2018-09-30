@@ -1,4 +1,4 @@
-package com.ajay.demoapp;
+package com.ajay.toastdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,13 +9,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void clickFunction(View view){
+    public void clickMe (View view){
 
-        EditText myTextField= (EditText)findViewById(R.id.myTextField);
-        Log.i("Info", myTextField.getText().toString());
-        Toast.makeText(MainActivity.this, myTextField.getText() + " Buga", Toast.LENGTH_LONG).show();
+        EditText nameText = findViewById(R.id.nameText);
+        Log.i("Info", nameText.getText().toString());
+        Toast.makeText(MainActivity.this, "Hi there, " + nameText.getText(), Toast.LENGTH_LONG).show();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
