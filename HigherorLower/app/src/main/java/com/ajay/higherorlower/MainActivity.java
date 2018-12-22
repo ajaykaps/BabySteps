@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
 
     int randomnum;
 
+    public void makeToast(String string){
+
+        Toast.makeText(MainActivity.this, string, Toast.LENGTH_SHORT).show();
+    }
 
     public void guessNumber (View view){
 
@@ -24,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
 
         if ( guessInt <  randomnum ) {
 
-            Toast.makeText(MainActivity.this, "Higher!", Toast.LENGTH_SHORT).show();
+            makeToast("Higher!");
 
         } else if ( guessInt > randomnum ){
 
-                Toast.makeText(MainActivity.this, "Lower!", Toast.LENGTH_SHORT).show();
+            makeToast("Lower!");
             }
 
          else {
 
-                Toast.makeText(MainActivity.this, "That's Right!!! Try Again", Toast.LENGTH_SHORT).show();
+            makeToast("That's Right!!! Try Again!");
 
                 Random rand = new Random() ;
 
